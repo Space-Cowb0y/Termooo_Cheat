@@ -44,9 +44,6 @@ if (window.location.href == "https://term.ooo/") {
     setTimeout(function () {
         lk = Array.from(normSolutiont[0].normSolution);
         preenche(lk);
-        setTimeout(function () {
-            window.location.href = "https://term.ooo/2/";
-        }, 10000);
     }, 6000);
 }
 if (window.location.href == "https://term.ooo/2/") {
@@ -57,9 +54,6 @@ if (window.location.href == "https://term.ooo/2/") {
         setTimeout(function () {
             lk = Array.from(normSolutionduo[1].normSolution);
             preenche(lk);
-            setTimeout(function () {
-                window.location.href = "https://term.ooo/4/";
-            }, 10000);
         }, 4000);
     }, 6000);
 }
