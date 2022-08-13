@@ -1,4 +1,5 @@
 async function treme() {
+    sites = ["https://term.ooo/","https://term.ooo/2/","https://term.ooo/4/"];
     response = await fetch(
         'https://gist.githubusercontent.com/un-versed/6373912fbf4649704b6823ea696cfcb1/raw/629137a0d0c7160b94c35013df8d570b31100174/termooo-wordsv2.json', {
         method: 'GET'
@@ -12,19 +13,21 @@ async function treme() {
     }
     document.querySelector("body>wc-kbd").shadowRoot.querySelector("#kbd_enter").click();
 
-
-    if (window.location.href == "https://term.ooo/") {
+    if (window.location.href != sites[1]){
+        window.location.href = sites[1];
+    }
+    if (window.location.href == sites[1]) {
         setTimeout(function () {
             normSolutiont = JSON.parse(window.localStorage.termo).state;
         }, 3000);
     }
-    if (window.location.href == "https://term.ooo/2/") {
+    if (window.location.href == sites[2]) {
         treme();
         setTimeout(function () {
             normSolutionduo = JSON.parse(window.localStorage.duo).state;
         }, 3000);
     }
-    if (window.location.href == "https://term.ooo/4/") {
+    if (window.location.href == sites[3]) {
         setTimeout(function () {
             normSolutionquatro = JSON.parse(window.localStorage.quatro).state;
         }, 3000);
